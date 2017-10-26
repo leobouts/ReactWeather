@@ -59,7 +59,7 @@
 
 	var obj = {
 
-	  name: 'Andrew'
+	  name: 'leo'
 
 	};
 
@@ -24857,6 +24857,7 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var Nav = __webpack_require__(217);
 
 	var Main = React.createClass({
 	    displayName: 'Main',
@@ -24864,14 +24865,41 @@
 
 	    render: function render() {
 	        return React.createElement(
-	            'h2',
+	            'div',
 	            null,
-	            'Main comp'
+	            React.createElement(Nav, null),
+	            React.createElement(
+	                'h2',
+	                null,
+	                'Main comp'
+	            )
 	        );
 	    }
 	});
 
 	module.exports = Main;
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Nav = React.createClass({
+	    displayName: 'Nav',
+
+	    render: function render() {
+	        return React.createElement(
+	            'h2',
+	            null,
+	            ' Nav Component'
+	        );
+	    }
+	});
+
+	module.exports = Nav;
 
 /***/ })
 /******/ ]);

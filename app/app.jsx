@@ -5,7 +5,7 @@ var Main = require('Main');
 
 var obj = {
 
-  name: 'Andrew'
+  name: 'leo'
 
 }
 

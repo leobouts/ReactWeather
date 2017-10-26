@@ -7,3 +7,5 @@ var Nav = React.createClass({
         );
     }
 });
+
+module.exports = Nav;
