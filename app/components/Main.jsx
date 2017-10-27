@@ -9,7 +9,7 @@ var Main = React.createClass({
 
             <Nav/>
             <h2>Main comp</h2>
-            
+            {this.props.children}
             </div>
         );
     }
