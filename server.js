@@ -5,7 +5,7 @@ var app = express();
 
 //variable for heroku port
 
-const PORT = procces.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 // code for the app for https (free api version of weathermap)
 // if its http or https, ok nice and cool my dude u may procced, next()
