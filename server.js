@@ -5,17 +5,17 @@ var app = express();
 
 //variable for heroku port
 
-var PORT = procces.env.PORT || 3000;
+const PORT = procces.env.PORT;
 
 // code for the app for https (free api version of weathermap)
 // if its http or https, ok nice and cool my dude u may procced, next()
 // else redirect with http
 
 app.use(function (req,res, next){
-  if(req.headers['x-forwarded-proto'] === 'https'){
+  if(req.headers['x-forwarded-proto'] === 'http'){
     next();
   } else {
-    res.redirect('https://' + req.hostname + req.url);
+    res.redirect('http://' + req.hostname + req.url);
   }
 });
 
