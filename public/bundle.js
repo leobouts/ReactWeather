@@ -24930,11 +24930,6 @@
 	        'div',
 	        null,
 	        React.createElement(
-	            'h2',
-	            null,
-	            ' Nav Component'
-	        ),
-	        React.createElement(
 	            IndexLink,
 	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	            ' Get Weather'
@@ -25028,11 +25023,6 @@
 	        return React.createElement(
 	            'div',
 	            null,
-	            React.createElement(
-	                'h3',
-	                null,
-	                ' weather components'
-	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	            renderMessage()
 	        );
@@ -26741,9 +26731,18 @@
 
 	var About = function About(props) {
 	    return React.createElement(
-	        'h3',
+	        'div',
 	        null,
-	        'About component'
+	        React.createElement(
+	            'h3',
+	            null,
+	            'About'
+	        ),
+	        React.createElement(
+	            'p',
+	            null,
+	            ' Welcome to the about page.'
+	        )
 	    );
 	};
 
@@ -26771,7 +26770,7 @@
 	    return React.createElement(
 	        'h3',
 	        null,
-	        ' Examples components'
+	        ' Examples'
 	    );
 	};
 	module.exports = Examples;
