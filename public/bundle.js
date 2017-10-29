@@ -25147,7 +25147,18 @@
 	                'Get Weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
-	            renderMessage()
+	            renderMessage(),
+	            React.createElement('br', null),
+	            React.createElement('br', null),
+	            React.createElement('br', null),
+	            React.createElement('br', null),
+	            React.createElement('br', null),
+	            React.createElement('br', null),
+	            React.createElement(
+	                'p',
+	                { className: 'text-justify' },
+	                'About Giberish results: the Open weather map API when auto correcting names leads to some strange search queries. For example "asdf" returns weather data for "La Atalaya" in Spain, others like "asdfasdf" will not work and the API will correctly respond with an error.'
+	            )
 	        );
 	    }
 	});
@@ -25266,26 +25277,20 @@
 
 
 	module.exports = {
+	  getTemp: function getTemp(location) {
+	    var encodedLocation = encodeURIComponent(location);
+	    var requestUrl = OPEN_WEATHER_MAP_URL + '&q=' + encodedLocation;
 
-	    getTemp: function getTemp(location) {
-
-	        var encodedLocation = encodeURIComponent(location);
-	        var requestUrl = OPEN_WEATHER_MAP_URL + '&q=' + encodedLocation;
-
-	        return axios.get(requestUrl).then(function (res) {
-
-	            if (res.data.cod && res.data.message) {
-
-	                throw new Error(res.data.message);
-	            } else {
-
-	                return res.data.main.temp;
-	            }
-	        }, function (res) {
-
-	            throw new Error(res.data.message);
-	        });
-	    }
+	    return axios.get(requestUrl).then(function (res) {
+	      if (res.data.cod && res.data.message) {
+	        throw new Error(res.data.message);
+	      } else {
+	        return res.data.main.temp;
+	      }
+	    }, function (res) {
+	      throw new Error(res.data.message);
+	    });
+	  }
 	};
 
 /***/ }),
