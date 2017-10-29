@@ -6,13 +6,9 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
-var obj = {
-
-  name: 'leo'
-
-}
-
-var {name} = obj;
+//LOAD FOUNDATION
+require('style!css!foundation-sites/dist/foundation.min.css')
+$(document).foundation();
 
 
 ReactDOM.render(
